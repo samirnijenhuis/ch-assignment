@@ -21,11 +21,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->when(ExchangeFactory::class)->needs(Exchange::class)->give(self::EXCHANGES);
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot()
     {
         Event::listen(Signal::class, \App\Listeners\TradeOnSignal::class);

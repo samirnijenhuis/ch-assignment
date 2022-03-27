@@ -4,11 +4,12 @@ namespace Tests\Unit\Exchanges;
 
 use App\Exchanges\CoinbasePro;
 use GuzzleHttp\Client;
+use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 
-class CoinbaseProTest extends \Tests\TestCase
+class CoinbaseProTest extends TestCase
 {
     public function test_getCandles_calls_api()
     {
@@ -48,7 +49,6 @@ class CoinbaseProTest extends \Tests\TestCase
         $this->assertEquals($response[0]['Open'], $candles->getCandles()[0]->open);
         $this->assertEquals($response[0]['High'], $candles->getCandles()[0]->high);
         $this->assertEquals($response[0]['Low'], $candles->getCandles()[0]->low);
-        $this->assertEquals('btc-eur', $candles->getCandles()[0]->pair);
     }
 
 

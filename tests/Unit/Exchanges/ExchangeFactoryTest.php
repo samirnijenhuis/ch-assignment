@@ -5,8 +5,9 @@ namespace Tests\Unit\Exchanges;
 use App\Exceptions\ExchangeNotFoundException;
 use App\Exchanges\Exchange;
 use App\Exchanges\ExchangeFactory;
+use PHPUnit\Framework\TestCase;
 
-class ExchangeFactoryTest extends \Tests\TestCase
+class ExchangeFactoryTest extends TestCase
 {
     public function test_it_throws_if_no_matching_exchange_found()
     {

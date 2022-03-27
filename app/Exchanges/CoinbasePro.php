@@ -22,7 +22,7 @@ class CoinbasePro implements Exchange
         ]);
 
         $candles = array_map(
-            fn($candle) => new Candle($pair, $candle['Open'], $candle['Close'], $candle['Low'], $candle['High']),
+            fn($candle) => new Candle($candle['Open'], $candle['Close'], $candle['Low'], $candle['High']),
             json_decode((string) $response->getBody(), true)
         );
         return new Candles(...$candles);
