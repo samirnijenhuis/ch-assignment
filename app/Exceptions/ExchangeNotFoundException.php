@@ -2,6 +2,8 @@
 
 namespace App\Exceptions;
 
+use App\Exchanges\ExchangeFactory;
+
 class ExchangeNotFoundException extends \RuntimeException
 {
 

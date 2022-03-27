@@ -4,7 +4,7 @@ namespace App\Events;
 
 class Signal
 {
-    public function __construct(public SignalType $type)
+    public function __construct(public SignalType $type, public string $pair)
     {
 
     }

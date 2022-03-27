@@ -20,6 +20,6 @@ class ExchangeFactory
             throw new ExchangeNotFoundException("Exchange with key [{$key}] net found.");
         }
 
-        return $exchange[0];
+        return reset($exchange);
     }
 }

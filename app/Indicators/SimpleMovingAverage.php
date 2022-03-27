@@ -4,7 +4,7 @@ namespace App\Indicators;
 
 use App\Candle;
 
-class SimpleMovingAverage implements Indicator
+class SimpleMovingAverage implements MovingAverage
 {
     private array $candles;
     private int $length;

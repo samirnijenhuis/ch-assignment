@@ -2,10 +2,10 @@
 
 namespace App\Listeners;
 
-class DisplaySignalType
+class TradeOnSignal
 {
     public function handle(\App\Events\Signal $signal)
     {
-        echo $signal->type->name;
+        echo sprintf("Execute %s on %s", $signal->type->name, $signal->pair);
     }
 }

@@ -28,6 +28,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Event::listen(Signal::class, \App\Listeners\DisplaySignalType::class);
+        Event::listen(Signal::class, \App\Listeners\TradeOnSignal::class);
     }
 }
