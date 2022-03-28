@@ -1,8 +1,9 @@
 ## How to run
 
  - `$ composer install`
+ - `$ php artisan test`
  - `$ php artisan serve`
- - [https://localhost:8080/trade]()
+ - [https://localhost:8000/](https://localhost:8000/)
 
 
 ## Assignment
